@@ -1,6 +1,11 @@
 <?php
 
+// declare(strict_types=1);
+
+// namespace App\Produk;
+
 abstract class Produk {
+
     protected $harga,
             $judul,
             $penerbit,
@@ -14,15 +19,11 @@ abstract class Produk {
                 $this->harga = $harga;
             }
 
-
             public function getLabel() 
             {
                 return "$this->penulis, $this->penerbit ";
             }
 
-            
-
             abstract public function getInfo();
             
-
 }

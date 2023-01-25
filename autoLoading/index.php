@@ -19,4 +19,8 @@ new ProdukUser;
 echo PHP_EOL;
 new ServiceUser;
 
+echo PHP_EOL;
+$game1 = new Game("FIFA 2023", "EA SPORT", "eFootball", 10000, 10);
+echo $game1->getInfoProduk();
+
 ?>
