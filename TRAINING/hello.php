@@ -92,7 +92,7 @@ echo "\n";
 
 define("APP", "HELLO APK");
 
-echo APP;
+echo APP . PHP_EOL;
 
 $a = 10;
 $b = 3;
