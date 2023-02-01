@@ -1,14 +1,13 @@
 <?php
 
 class Kata {
-    public function pertama() {
+    public static function Pertama() {
         echo "Hai ";
     }
 
-    public static function kedua() {
-        (new self)->pertama();
-        echo "Dunia ";
+    public static function Kedua() {
+        echo static::Pertama() . "Dunia";
     }
 }
 
-Kata::kedua();
+Kata::Kedua();
