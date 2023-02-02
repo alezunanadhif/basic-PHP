@@ -62,7 +62,7 @@ return true;
 }
 }
 $magic = new issets();
-var_dump(isset($magic->name));
+// var_dump(isset($magic->name));
 
 class unsets {
 
@@ -82,7 +82,7 @@ class unsets {
 
 $ndf = new unsets();
 var_dump($ndf);
-unset($ndf->nama);
+// unset($ndf->nama);
 var_dump($ndf);
 
 class sleeps
