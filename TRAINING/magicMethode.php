@@ -34,19 +34,69 @@ class MagicMethod
     }
 }
 
-$magic = new MagicMethod();
-$magic->name = 'Muhammad Surya Iksanudin';
-$magic->age = 17;
-echo $magic->name;
-echo $magic->age;
-echo $magic->getName();
-echo $magic->getAge();
-$magic->ppp = "Ppp";
+// $magic = new MagicMethod();
+// $magic->name = 'Muhammad Surya Iksanudin';
+// $magic->age = 17;
+// echo $magic->name;
+// echo $magic->age;
+// echo $magic->getName();
+// echo $magic->getAge();
+// $magic->ppp = "Ppp";
 
-try {
-    $magic->ppp;
-} catch (ParseError $p) {
-    echo $p->getMessage();
-} 
+// try {
+//     $magic->ppp;
+// } catch (ParseError $p) {
+//     echo $p->getMessage();
+// } 
 
-echo $magic->getName();
+// echo $magic->getName();
+
+class issets
+{
+private $name;
+public function __isset($property)
+{
+if ('name' === $property) {
+return true;
+}
+}
+}
+$magic = new issets();
+var_dump(isset($magic->name));
+
+class unsets {
+
+    private $user = [
+        'nama' => 'nadhif',
+        'alamat' => 'kisaran',
+        'ig' => 'alezunadhif_'
+    ];
+
+    public function __unset($property)
+    {
+        if (isset($this->user[$property])) {
+            unset($this->user[$property]);
+        }
+    }
+}
+
+$ndf = new unsets();
+var_dump($ndf);
+unset($ndf->nama);
+var_dump($ndf);
+
+class sleeps
+{
+    private $data = [
+        'name' => 'Muhamad Surya Iksanudin',
+        'address' => 'In your hearth',
+    ];
+
+    public function __sleep()
+    {
+        return ['data'];
+    }
+}
+
+$magic = new sleeps();
+var_dump(serialize($magic));
