@@ -126,7 +126,12 @@ $nasabah1->database();
 class strStr {
 
     public function cetakText() {
-        return "Hell Ngab";
+        return "Hello Ngab";
+    }
+
+    public function __toString()
+    {
+        return "Hello Bwang";
     }
 }
 
