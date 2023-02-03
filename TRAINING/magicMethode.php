@@ -85,6 +85,7 @@ var_dump($ndf);
 // unset($ndf->nama);
 var_dump($ndf);
 
+// SLEEP MASIH BELUM NGERTI
 class sleeps
 {
     private $data = [
@@ -98,5 +99,36 @@ class sleeps
     }
 }
 
-$magic = new sleeps();
-var_dump(serialize($magic));
+// $magic = new sleeps();
+// var_dump(serialize($magic));
+
+class Bank {
+
+    private function database() {
+
+        echo "selamat anda berhasil masuk " . PHP_EOL;
+    }
+
+    public function __call($name, $arguments)
+    {
+        
+        if ($name === 'database') {
+            return $this->database();
+        } else {
+            throw new ParseError(sprintf('$name tidak di temukan'));
+        }
+    }
+}
+
+$nasabah1 = new Bank;
+$nasabah1->database();
+
+class strStr {
+
+    public function cetakText() {
+        return "Hell Ngab";
+    }
+}
+
+$cetak = new strStr;
+echo $cetak->cetakText();
