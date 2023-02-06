@@ -3,7 +3,7 @@
 class FourthRuleCalculator extends AbstractCalculator {
     public function maxPkp(): float
 {
-    return 99999999;
+    return 99999999999999;
 }
     public function minPkp(): float
 {
