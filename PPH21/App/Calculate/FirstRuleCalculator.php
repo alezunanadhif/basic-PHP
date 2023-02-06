@@ -1,16 +1,17 @@
 <?php
-class FirstRuleCalculator extends AbstractCalculator
+
+class FirstRuleCalculator extends AbstractCalculator {
+    
+    public function maxPkp(): float
 {
-public function maxPkp(): float
-{
-return 50000000;
+    return 50000000;
 }
-public function minPkp(): float
+    public function minPkp(): float
 {
-return 0;
+    return 0;
 }
-public function taxPercentage(): float
+    public function taxPercentage(): float
 {
-return 0.05;
+    return 0.05;
 }
 }
