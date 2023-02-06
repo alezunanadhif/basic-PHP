@@ -7,5 +7,6 @@ $second = new SecondRuleCalculator($first);
 $third = new ThirdRuleCalculator($second);
 $fourth = new FourthRuleCalculator($third);
 $calculator = new PPH21Calculator($first, $second, $third, $fourth);
-echo $calculator->calculate(25000000) . PHP_EOL;
-echo $calculator->calculate(3000000000) . PHP_EOL;
+
+$penghasilanAkhir = $calculator->calculate(70000000);
+echo "Penghasilan Akhir Rp. " . number_format($penghasilanAkhir) . PHP_EOL;
