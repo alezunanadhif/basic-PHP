@@ -10,6 +10,7 @@ class ComposerStaticInitd4a3fed0e3cfdec7695da252ccbbd854
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'PPH21\\Calculate\\' => 16,
         ),
         'M' => 
         array (
@@ -21,6 +22,10 @@ class ComposerStaticInitd4a3fed0e3cfdec7695da252ccbbd854
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'PPH21\\Calculate\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Calculate',
         ),
         'Monolog\\' => 
         array (
