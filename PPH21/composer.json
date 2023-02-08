@@ -1,10 +1,28 @@
 {
+    "type": "library",
+    "license": "proprietary",
+    "name": "pph21/calculate",
+    "authors": [
+    {
+        "name": "Muhamad Surya Iksanudin",
+        "email": "surya.iksanudin@gmail.com",
+        "homepage": "https://github.com/alezunanadhif"
+    }
+    ],
     "require": {
-    "monolog/monolog": "1.23.*"
+    "php": "8.0.25"
+    },
+    "config": {
+    "preferred-install": {
+        "*": "dist"
+    },
+    "sort-packages": true,
+    "classmap-authoritative": true,
+    "optimize-autoloader": true
 },
     "autoload": {
     "psr-4": {
-        "PPH21\\Calculate\\": "Calculate/"
+        "App\\Calculate\\": "App/Calculate"
     }
     }
 }

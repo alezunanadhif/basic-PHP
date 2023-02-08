@@ -15,6 +15,7 @@ $third = new ThirdRuleCalculator($second);
 $fourth = new FourthRuleCalculator($third);
 $calculator = new PPH21Calculator($first, $second, $third, $fourth);
 
+// Masukin Gaji Pertahun di Sini
 $gaji = 70000000;
 $pph21 = $calculator->calculate($gaji);
 $penghasilanAkhir = $gaji - $pph21;

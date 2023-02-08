@@ -6,7 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
-    'PPH21\\Calculate\\' => array($baseDir . '/Calculate'),
-    'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'App\\Calculate\\' => array($baseDir . '/App/Calculate'),
 );

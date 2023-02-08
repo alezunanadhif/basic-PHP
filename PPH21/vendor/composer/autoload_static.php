@@ -4,45 +4,39 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd4a3fed0e3cfdec7695da252ccbbd854
+class ComposerStaticInit1dc62a14c7c64aa69b477d062cf3860d
 {
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'A' => 
         array (
-            'Psr\\Log\\' => 8,
-            'PPH21\\Calculate\\' => 16,
-        ),
-        'M' => 
-        array (
-            'Monolog\\' => 8,
+            'App\\Calculate\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Psr\\Log\\' => 
+        'App\\Calculate\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'PPH21\\Calculate\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Calculate',
-        ),
-        'Monolog\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+            0 => __DIR__ . '/../..' . '/App/Calculate',
         ),
     );
 
     public static $classMap = array (
+        'App\\Calculate\\AbstractCalculator' => __DIR__ . '/../..' . '/App/Calculate/AbstractCalculator.php',
+        'App\\Calculate\\CalculatorInterface' => __DIR__ . '/../..' . '/App/Calculate/CalculatorInterface.php',
+        'App\\Calculate\\FirstRuleCalculator' => __DIR__ . '/../..' . '/App/Calculate/FirstRuleCalculator.php',
+        'App\\Calculate\\FourthRuleCalculator' => __DIR__ . '/../..' . '/App/Calculate/FourthRuleCalculator.php',
+        'App\\Calculate\\PPH21Calculator' => __DIR__ . '/../..' . '/App/Calculate/PPH21Calculator.php',
+        'App\\Calculate\\SecondRuleCalculator' => __DIR__ . '/../..' . '/App/Calculate/SecondRuleCalculator.php',
+        'App\\Calculate\\ThirdRuleCalculator' => __DIR__ . '/../..' . '/App/Calculate/ThirdRuleCalculator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd4a3fed0e3cfdec7695da252ccbbd854::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd4a3fed0e3cfdec7695da252ccbbd854::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd4a3fed0e3cfdec7695da252ccbbd854::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1dc62a14c7c64aa69b477d062cf3860d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1dc62a14c7c64aa69b477d062cf3860d::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit1dc62a14c7c64aa69b477d062cf3860d::$classMap;
 
         }, null, ClassLoader::class);
     }
